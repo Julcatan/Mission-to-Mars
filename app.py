@@ -1,6 +1,6 @@
 from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
-import scraping3
+import scraping
 
 #The first line says that we'll use Flask to render a template, redirecting to another url, and creating a URL.
 #The second line says we'll use PyMongo to interact with our Mongo database.
