@@ -4,8 +4,6 @@ from bs4 import BeautifulSoup as soup
 import pandas as pd
 import datetime as dt
 from webdriver_manager.chrome import ChromeDriverManager
-
-
 def scrape_all():
     # Initiate headless driver for deployment
     executable_path = {'executable_path': ChromeDriverManager().install()}
@@ -28,7 +26,6 @@ def scrape_all():
 
 
 def mars_news(browser):
-
     # Scrape Mars News
     # Visit the mars nasa news site
     url = 'https://data-class-mars.s3.amazonaws.com/Mars/index.html'
@@ -51,10 +48,7 @@ def mars_news(browser):
 
     except AttributeError:
         return None, None
-
     return news_title, news_p
-
-
 def featured_image(browser):
     # Visit URL
     url = 'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/index.html'
@@ -78,7 +72,6 @@ def featured_image(browser):
 
     # Use the base url to create an absolute url
     img_url = f'https://data-class-jpl-space.s3.amazonaws.com/JPL_Space/{img_url_rel}'
-
     return img_url
 
 def mars_facts():
