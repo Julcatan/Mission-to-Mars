@@ -21,7 +21,7 @@ def scrape_all():
         "featured_image": featured_image(browser),
         "facts": mars_facts(),
         "last_modified": dt.datetime.now(),
-        'urls':hemispheres_f(browser),
+        'urls':hemispheres(browser),
         
     }
 
@@ -95,7 +95,7 @@ def mars_facts():
     # Convert dataframe into HTML format, add bootstrap
     return df.to_html(classes="table table-striped")
 
-def hemispheres_f(browser):
+def hemispheres(browser):
     # Add try/except for error handling
     try:
 
